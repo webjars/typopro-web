@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>typopro-web</artifactId>
-    <version>3.4.9-SNAPSHOT</version>
+    <version>3.4.9</version>
     <name>typopro-web</name>
     <description>WebJar for typopro-web</description>
     <url>http://webjars.org</url>
@@ -32,8 +32,8 @@
     <developers>
         <developer>
             <id>pedrosans</id>
-            <name></name>
-            <email></email>
+            <name />
+            <email />
         </developer>
     </developers>
 
@@ -64,7 +64,7 @@
         <url>http://github.com/webjars/typopro-web</url>
         <connection>scm:git:https://github.com/webjars/typopro-web.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/typopro-web.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>typopro-web-3.4.9</tag>
     </scm>
     
     <build>
@@ -93,13 +93,13 @@
                         <goals><goal>run</goal></goals>
                         <configuration>
                             <target>
-                                <echo message="download archive"/>
-                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip"/>
-                                <echo message="unzip archive"/>
-                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}"/>
-                                <echo message="moving resources"/>
+                                <echo message="download archive" />
+                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip" />
+                                <echo message="unzip archive" />
+                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
+                                <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/${project.artifactId}-${version.unsnapshot}"/>
+                                    <fileset dir="${project.build.directory}/${project.artifactId}-${version.unsnapshot}" />
                                 </move>
                             </target>
                         </configuration>
